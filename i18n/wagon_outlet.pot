@@ -1,0 +1,435 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* wagon_outlet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-23 16:57+0000\n"
+"PO-Revision-Date: 2016-09-23 16:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: wagon_outlet
+#: model:ir.actions.act_window,help:wagon_outlet.wagon_outlet_list_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first wagon outlet\n"
+"                </p>\n"
+"            "
+msgstr ""
+
+#. module: wagon_outlet
+#: selection:wagon.outlet,state:0
+msgid "Analysis"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,break_rate:0
+msgid "Break rate"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,broken_kilos:0
+msgid "Broken kilos"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_search_view
+#: selection:wagon.outlet,state:0
+msgid "Capture"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,clean_kilos:0
+msgid "Clean kilos"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,contract_id:0
+msgid "Contract id"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,contract_type:0
+msgid "Contract type"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,partner_id:0
+msgid "Customer"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,damage_rate:0
+msgid "Damage rate"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,damaged_kilos:0
+msgid "Damaged kilos"
+msgstr ""
+
+#. module: wagon_outlet
+#: help:wagon.outlet,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,deducted_kilos:0
+msgid "Deducted kilos"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+#: field:wagon.outlet,delivered:0
+msgid "Delivered"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,density:0
+msgid "Density"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_search_view
+#: selection:wagon.outlet,state:0
+msgid "Done"
+msgstr ""
+
+#. module: wagon_outlet
+#: model:ir.model,name:wagon_outlet.model_wagon_outlet
+msgid "Email Thread"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view_permissions_ship
+msgid "Finalize"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: wagon_outlet
+#: help:wagon.outlet,contract_state:0
+msgid "Gives the status of the quotation or sales order.              \n"
+"The exception status is automatically set when a cancel operation occurs               in the invoice validation (Invoice Exception) or in the picking list process (Shipping Exception).\n"
+"The 'Waiting Schedule' status is set when the invoice is confirmed               but waiting for the scheduler to run on the order date."
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+#: field:wagon.outlet,hired:0
+msgid "Hired"
+msgstr ""
+
+#. module: wagon_outlet
+#: help:wagon.outlet,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,humid_kilos:0
+msgid "Humid kilos"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,humidity_rate:0
+msgid "Humidity rate"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,id:0
+msgid "ID"
+msgstr ""
+
+#. module: wagon_outlet
+#: help:wagon.outlet,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,impure_kilos:0
+msgid "Impure kilos"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,impurity_rate:0
+msgid "Impurity rate"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,location_id:0
+msgid "Input Location"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_search_view
+#: selection:wagon.outlet,state:0
+msgid "Load"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: wagon_outlet
+#: help:wagon.outlet,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,name:0
+msgid "Name"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,zvp_partner:0
+msgid "Partner"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+#: field:wagon.outlet,pending:0
+msgid "Pending"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,product_id:0
+msgid "Product id"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,raw_kilos:0
+msgid "Raw kilos"
+msgstr ""
+
+#. module: wagon_outlet
+#: model:ir.model,name:wagon_outlet.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,seal_down_from:0
+msgid "Seal down from"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,seal_down_to:0
+msgid "Seal down to"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,seal_up_from:0
+msgid "Seal up from"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,seal_up_to:0
+msgid "Seal up to"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_search_view
+#: field:wagon.outlet,state:0
+msgid "State"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,contract_state:0
+msgid "Status"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,stock_picking_id:0
+msgid "Stock picking id"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,street:0
+msgid "Street"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,temperature:0
+msgid "Temperature"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,ticket:0
+msgid "Ticket"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+msgid "Transfer"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,transgenic:0
+msgid "Transgenic"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+msgid "Update"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,wagon:0
+msgid "Wagon"
+msgstr ""
+
+#. module: wagon_outlet
+#: model:ir.actions.act_window,name:wagon_outlet.wagon_outlet_list_action
+#: model:ir.ui.menu,name:wagon_outlet.menu_action_wagon_outlet_form
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+msgid "Wagon Outlet"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+msgid "Wagon Outlet Form"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_tree_view
+msgid "Wagon Outlet Tree"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:sale.order,wagon_outlet_ids:0
+msgid "Wagon outlet ids"
+msgstr ""
+
+#. module: wagon_outlet
+#: model:res.groups,name:wagon_outlet.group_wagon_outlet
+msgid "Wagon/Outlet"
+msgstr ""
+
+#. module: wagon_outlet
+#: model:res.groups,name:wagon_outlet.group_wagon_outlet_ship
+msgid "Wagon/Outlet/Ship"
+msgstr ""
+
+#. module: wagon_outlet
+#: model:res.groups,name:wagon_outlet.group_wagon_outlet_weights
+msgid "Wagon/Outlet/Weights"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:sale.order:wagon_outlet.sale_order_wagon_outlet
+msgid "Wagons outlet"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,website_message_ids:0
+msgid "Website Messages"
+msgstr ""
+
+#. module: wagon_outlet
+#: help:wagon.outlet,website_message_ids:0
+msgid "Website communication history"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+#: field:wagon.outlet,weight_1:0
+msgid "Weight 1"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+#: field:wagon.outlet,weight_2:0
+msgid "Weight 2"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+#: field:wagon.outlet,weight_3:0
+msgid "Weight 3"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+#: field:wagon.outlet,weight_4:0
+msgid "Weight 4"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_search_view
+msgid "Weight output"
+msgstr ""
+
+#. module: wagon_outlet
+#: field:wagon.outlet,zvp_id:0
+msgid "Zvp id"
+msgstr ""
+
+#. module: wagon_outlet
+#: view:wagon.outlet:wagon_outlet.wagon_outlet_form_view
+msgid "to"
+msgstr ""
+

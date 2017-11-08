@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <record id="seq_wagon_outlet" model="ir.sequence">
+            <field name="name">reg</field>
+            <field name="code">reg_code_wo</field>
+            <field name="prefix">WO</field>
+            <field name="padding">5</field>
+            <field name="implementation">no_gap</field>
+            <field name='number_increment'>1</field>
+        </record>
+
+        <record model="ir.ui.view" id="wagon_outlet_form_view">
+            <field name="name">wagon.outlet.form</field>
+            <field name="model">wagon.outlet</field>
+            <field name="arch" type="xml">
+                <form string="Wagon Outlet Form">
+                    <field name="contract_state" invisible="1"/>
+                    <header>
+                        <button name="fun_load" type="object" string="Load" states="load" class="oe_highlight"/>
+                        <button name="fun_transfer" type="object" string="Transfer" class="oe_highlight"
+			    groups="truck_reception.group_truck_transfer"
+                            attrs="{'invisible': ['|',
+                                                        ('contract_state', 'in', ['except_picking']),
+                                                        '|',
+                                                            ('state', 'not in', ['done']),
+                                                            ('stock_picking_id', '!=', False)]}"/>
+                        <field name="state" widget="statusbar" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label string="Wagon Outlet "/>
+                                <field name="name" class="oe_inline" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group col="1">
+                                <group col="3">
+                                    <field name="contract_id" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
+                                    <field name="contract_type" nolabel="1" class="oe_inline"/>
+				                  <field name="active" string="Activo" groups="__export__.res_groups_96"/>
+                                </group>
+                                <group>
+                                    <field name="partner_id"/>
+                                    <field name="street"/>
+				                    <field name="location_id" string="Ubicacion de salida"  attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
+                            <field name="owner_id" />
+                                </group>
+                            </group>
+                            <group col="1">
+                                <group>
+                                    <field name="wagon" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
+                                    <field name="order_num"/>
+                                </group>
+                                <group col="3">
+                                    <field name="zvp_id" required="1" string="ZVP" attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
+                                    <field name="zvp_partner" nolabel="1" class="oe_inline"/>
+                                </group>
+
+                                <group col="4">
+                                    <field name="seal_down_from" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}" style="width: 150%%"/>
+                                    <field name="seal_down_to" string="to" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}" class="oe_inline"  />
+                                </group>
+
+                            </group>
+                        </group>
+                        <group col="3">
+                            <group col="1">
+                                <label for="hired" string="Hired"/>
+                                <field name="hired" class="oe_inline" nolabel="1"/>
+                            </group>
+                            <group col="1">
+                                <label for="delivered" string="Delivered"/>
+                                <field name="delivered" class="oe_inline" nolabel="1"/>
+                            </group>
+                            <group col="1">
+                                <label for="pending" string="Pending"/>
+                                <field name="pending" class="oe_inline" nolabel="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="product_id"/>
+                        </group>
+                        <button type="object" string="Update" states="capture" class="oe_highlight"/>
+                        <group col="3">
+                                <group>
+                                    <field name="humidity_rate" string="Humedad" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
+                                    <field name="density" string="Densidad" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
+                                    <field name="temperature" string="Temperatura" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
+                                </group>
+                            <group>
+                                <field name="damage_rate" string="Daño" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
+                                <field name="break_rate" string="Quebrado" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
+                                <field name="impurity_rate" string="Impureza" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
+                            </group>
+                            <group col="1">
+                                <group>
+                                    <field name="transgenic" string="Transgenico" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="seal_up_from" attrs="{'readonly':[('state', 'not in', ['analysis'])], 'required':[('state', 'in', ['analysis'])]}"/>
+                                    <field name="seal_up_to" string="to" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
+                                </group>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="ticket" attrs="{'readonly':[('state', 'not in', ['load'])], 'required':[('state', 'in', ['load'])]}" style="width: 45%"/>
+                        </group>
+                        <group>
+                            <group col="1">
+                                <group col="5">
+                                    <group col="1">
+                                        <label string="Weight 1"/>
+                                        <field name="weight_1" readonly="1" attrs="{'invisible': [('state', '=', 'capture')]}" required="1" nolabel="1"/>
+                                    </group>
+                                    <group col="1">
+                                        <label string="Weight 2"/>
+                                        <field name="weight_2" readonly="1" attrs="{'invisible': [('state', '=', 'capture')]}" required="1" nolabel="1"/>
+                                    </group>
+                                    <group col="1">
+                                        <label string="Weight 3"/>
+                                        <field name="weight_3" readonly="1" attrs="{'invisible': [('state', '=', 'capture')]}" required="1" nolabel="1"/>
+                                    </group>
+                                    <group col="1">
+                                        <label string="Peso 4"/>
+                                        <field name="weight_4" attrs="{'invisible': [('state', '=', 'capture')]}" required="1" nolabel="1"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <field name="raw_kilos" string="Kilos neto"/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="damaged_kilos" string="Kilos dañados"/>
+                                <field name="broken_kilos" string="Kilos quebrados"/>
+                                <field name="impure_kilos" string="Kilos impuros"/>
+                                <field name="humid_kilos" string="Kilos humedos"/>
+                                <field name="clean_kilos" string="Kilos limpios"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="stock_picking_id" string="Movimiento de almacen" attrs="{'invisible': [('state', 'not in', 'done')]}"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wagon_outlet_tree_view">
+            <field name="name">wagon.outlet.tree</field>
+            <field name="model">wagon.outlet</field>
+            <field name="arch" type="xml">
+                <tree string="Wagon Outlet Tree">
+                    <field name="name"/>
+                    <field name="contract_id"/>
+		    <field name="order_num"/>
+                    <field name="wagon"/>
+		    <field name="raw_kilos" sum="raw kilos"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wagon_outlet_form_view_permissions">
+            <field name="name">wagon.outlet.form</field>
+            <field name="model">wagon.outlet</field>
+            <field name="inherit_id" ref="wagon_outlet_form_view"/>
+            <field name="groups_id" eval="[(6,0, [ref('group_wagon_outlet')])]" />
+            <field name="arch" type="xml">
+                <field name="state" position="attributes">
+                    <attribute name="clickable">1</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wagon_outlet_form_view_permissions_weights">
+            <field name="name">wagon.outlet.form</field>
+            <field name="model">wagon.outlet</field>
+            <field name="inherit_id" ref="wagon_outlet_form_view"/>
+            <field name="groups_id" eval="[(6,0, [ref('group_wagon_outlet_weights')])]" />
+            <field name="arch" type="xml">
+                <field name="weight_1" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                    <attribute name="states">load</attribute>
+                </field>
+                <field name="weight_2" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                    <attribute name="states">load</attribute>
+                </field>
+                <field name="weight_3" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                    <attribute name="states">load</attribute>
+                </field>
+                <field name="weight_4" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                    <attribute name="states">load</attribute>
+
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wagon_outlet_form_view_permissions_ship">
+            <field name="name">wagon.outlet.form</field>
+            <field name="model">wagon.outlet</field>
+            <field name="inherit_id" ref="wagon_outlet_form_view"/>
+            <field name="groups_id" eval="[(6,0, [ref('group_wagon_outlet_ship')])]" />
+            <field name="arch" type="xml">
+                <button name="fun_transfer" position="after">
+                    <button name="fun_ship" type="object" string="Finalize"
+                            attrs="{'invisible': ['|',
+                                ('contract_state', 'in', ['except_picking']),
+                                ('state', 'not in', ['done'])]}"/>
+                    </button>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="wagon_outlet_search_view">
+            <field name="name">wagon.outlet.search</field>
+            <field name="model">wagon.outlet</field>
+            <field name="arch" type="xml">
+                <search>
+                    <filter name="capture" string="Capture" domain="[('state', '=', 'capture')]"/>
+                    <filter name="load" string="Load" domain="[('state', '=', 'load')]"/>
+                    <filter name="analysis" string="Weight output" domain="[('state', '=', 'analysis')]"/>
+                    <filter name="done" string="Done" domain="[('state', '=', 'done')]"/>
+                    <separator/>
+                    <group string="Group By">
+                        <filter name="group_by_state" string="State"
+                                context="{'group_by': 'state'}"/>
+			<filter name="group_by_partner" string="Cliente"
+                                context="{'group_by': 'partner_id'}"/>
+			  <filter name="group_by_location" string="Ubicacion"
+                                context="{'group_by': 'location_id'}"/>
+			<filter name="group_by_order_num" string="Numero de Pedido"
+                                context="{'group_by': 'order_num'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="wagon_outlet_list_action">
+            <field name="name">Wagon Outlet</field>
+            <field name="res_model">wagon.outlet</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first wagon outlet
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+            id="menu_action_wagon_outlet_form"
+            parent="vehicle_outlet.menu_outlets"
+            action="wagon_outlet_list_action"/>
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="res.groups" id="group_wagon_outlet">
+            <field name="name">Wagon/Outlet</field>
+        </record>
+        <record model="res.groups" id="group_wagon_outlet_weights">
+            <field name="name">Wagon/Outlet/Weights</field>
+        </record>
+        <record model="res.groups" id="group_wagon_outlet_ship">
+            <field name="name">Wagon/Outlet/Ship</field>
+        </record>
+    </data>
+</openerp>
