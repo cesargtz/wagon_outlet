@@ -50,6 +50,7 @@
                             </group>
                             <group col="1">
                                 <group>
+                                    <field name="date"/>
                                     <field name="wagon" required="1" attrs="{'readonly':[('state', 'not in', ['capture'])]}"/>
                                     <field name="order_num"/>
                                 </group>
